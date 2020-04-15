@@ -2,12 +2,9 @@
  * 
  */
 package com.project.spacehub.models;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
-
-
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -52,7 +49,7 @@ public class Product {
 	@Column(name="product_image")
 	private String productImg;
 	
-	@OneToOne
+	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name="status_name")
     private ProductStatus productStatus;
     

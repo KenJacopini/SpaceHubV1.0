@@ -18,14 +18,17 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name="spacehub_user")
+@Table(name="spacehub_user",
+uniqueConstraints = { 
+		@UniqueConstraint(columnNames = {"email"})						
+		})
 public class SpaceHubUser {
 	
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
-	private int id;
+	private Long id;
 	
 	@Column(name="email")
 	private String email;
@@ -86,11 +89,11 @@ public class SpaceHubUser {
 	}
 
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -173,13 +176,7 @@ public class SpaceHubUser {
 		this.roles = roles;
 	}
 
-	@Override
-	public String toString() {
-		return "SpaceHubUser [id=" + id + ", email=" + email + ", password=" + password + ", firstName=" + firstName
-				+ ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", passwordConfirm=" + passwordConfirm
-				+ "]";
-	}
-
+	
 	
 	
 	

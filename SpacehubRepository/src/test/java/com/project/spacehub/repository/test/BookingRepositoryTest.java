@@ -46,12 +46,12 @@ class BookingRepositoryTest {
 		prepo.save(product1);
 		
 		
-		SpaceHubUser user = new SpaceHubUser("ge@goole.com","123","gbemi","google","1234566");
+		SpaceHubUser user = new SpaceHubUser("ge@,mn,myjgoole.com","123","gbemi","google","1234566");
 		
 		userprepo.save(user);
 		
 		
-		Booking book = new Booking("gby@goole.com","gbemi",product1,user);
+		Booking book = new Booking("gbjjhjhky@goole.com","gbemi",product1,user);
 		
 		
 		bk.save(book);
@@ -59,4 +59,12 @@ class BookingRepositoryTest {
 		
 	}
 
+	@Test
+	void testUser() {
+		
+     SpaceHubUser user = new SpaceHubUser("ge@moyjgoole.com","123","gbemi","google","1234566");
+		
+		userprepo.save(user);
+		
+	}
 }

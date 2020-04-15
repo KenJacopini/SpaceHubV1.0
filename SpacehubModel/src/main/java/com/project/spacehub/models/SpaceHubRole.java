@@ -30,7 +30,7 @@ public class SpaceHubRole {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="role_id")
-	private int roleId;
+	private Long roleId;
 	
 	@Enumerated(EnumType.STRING)
 	@NaturalId
@@ -38,12 +38,12 @@ public class SpaceHubRole {
 	private RoleName name;
 	
 	
-	public int getRoleId() {
+	public Long getRoleId() {
 		return roleId;
 		
 	}
 
-	public void setRoleId(int roleId) {
+	public void setRoleId(Long roleId) {
 		this.roleId = roleId;
 	}
 

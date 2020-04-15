@@ -48,6 +48,10 @@ public class Booking {
 
 	
 
+	public Booking() {
+		
+	}
+
 	public Booking(String email, String name, Product productId, SpaceHubUser userId) {
 		super();
 		this.email = email;
