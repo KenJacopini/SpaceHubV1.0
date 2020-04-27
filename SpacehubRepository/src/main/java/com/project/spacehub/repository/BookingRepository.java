@@ -12,6 +12,6 @@ import com.project.spacehub.models.Booking;
  *
  */
 
-public interface BookingRepository extends JpaRepository<Booking, Long> {
+public interface BookingRepository extends JpaRepository<Booking, Integer> {
 
 }
