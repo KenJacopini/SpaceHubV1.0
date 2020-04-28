@@ -33,9 +33,9 @@ public class BookingController {
 
     }
 
-    @GetMapping("booked/{id}")
-    public List<Booking> getAllVacantProducts(){
-        List<Product> products = productRepository.findAll(Booking.class.)
-
-    }
+//    @GetMapping("booked/{id}")
+//    public List<Booking> getAllVacantProducts(){
+//        List<Product> products = productRepository.findAll(Booking.class.)
+//
+//    }
 }
